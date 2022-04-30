@@ -1,28 +1,43 @@
 import 'dart:isolate';
 
 void main(List<String> args) {
-  print(fibDP(40, {1:1, 2:1}));
-  print(fib(40));
+  //! first
+  // print(fibDP(40, {1: 1, 2: 1}));
 
+  //! second
+  // print(fib(40));
 
-  ReceivePort receivePort = ReceivePort();
+  //! third
+  // ReceivePort receivePort = ReceivePort();
 
-  // var isolate = Isolate.spawn(fibIsolate, receivePort.sendPort);
+  // Isolate.spawn(fibIsolate, [receivePort.sendPort, 40]);
 
+  // receivePort.listen((message) {
+  //   print(message);
 
+  //   receivePort.close();
+  // });
 }
 
-int fibDP(int n, Map<int, int> _cashe) {
-  return _cashe.putIfAbsent(n, () => fibDP(n - 1, _cashe) + fibDP(n - 2, _cashe));
-}
+//! first
+// int fibDP(int n, Map<int, int> _cashe) {
+//   return _cashe.putIfAbsent(
+//       n, () => fibDP(n - 1, _cashe) + fibDP(n - 2, _cashe));
+// }
 
-int fib(int n) {
-  if (n <= 2) return 1;
-  return fib(n - 1) + fib(n - 2);
-}
+//! second
+// int fib(int n) {
+//   if (n <= 2) return 1;
+//   return fib(n - 1) + fib(n - 2);
+// }
 
-// int fibIsolate(SendPort sendPort) {
+//! third
+// void fibIsolate(List args) {
+//   var list = [1, 1];
 
-//   if (sendPort <= 2) return 1;
-//   return fibIsolate(n - 1) + fibIsolate(n - 2);
+//   for (int i = 2; i < args[1]; i++) {
+//     list.add(list[i - 1] + list[i - 2]);
+//   }
+
+//   args[0].send(list.last);
 // }
