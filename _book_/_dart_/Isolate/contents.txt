@@ -1,0 +1,11 @@
+cayts:
+	https://medium.com/@niranjannaik267/isolates-eventloop-and-event-queue-in-flutter-d56595ce7aa2
+	https://blog.codemagic.io/understanding-flutter-isolates/
+git:
+	https://github.com/goderbauer/io22concurrency
+you-tube:
+	https://www.youtube.com/watch?v=qrFTt1NZed8
+	https://www.youtube.com/watch?v=yUMjt0AxVHU&t=691s
+book:
+	Flutter Complete Referense
+	Dart Apprentice
