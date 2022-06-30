@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
-import 'examples/example.dart';
+import 'examples/page_storage_key_second.dart';
 
 void main() {
-  debugRepaintRainbowEnabled = true;
   runApp(const MyApp());
 }
 
@@ -25,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 //* widgetlarni joyini almashtirganda
-//* scrolni eslab qolish kerak bo'lganda
+//* scrolni eslab qolish kerak bo'lganda,
 //* dismisible da
 //* Hero da
 
