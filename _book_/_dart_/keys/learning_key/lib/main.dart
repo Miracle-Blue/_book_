@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'examples/page_storage_key_second.dart';
+import 'examples/global_example_second.dart';
 
 void main() {
   runApp(const MyApp());

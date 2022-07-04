@@ -18,7 +18,7 @@ class Example extends StatelessWidget {
               case 0:
                 return Container(
                   color: Colors.green.shade100,
-                  child: const _Page(key: PageStorageKey(1)),
+                  child: const _Page(key: ValueKey(1)),
                 );
               case 1:
                 return Container(
@@ -29,7 +29,7 @@ class Example extends StatelessWidget {
               case 2:
                 return Container(
                   color: Colors.red.shade100,
-                  child: const _Page(key: PageStorageKey(2)),
+                  child: const _Page(key: ValueKey(2)),
                 );
               default:
                 throw '404';

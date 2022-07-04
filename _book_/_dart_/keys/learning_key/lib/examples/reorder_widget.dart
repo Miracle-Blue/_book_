@@ -27,18 +27,7 @@ class _ExampleState extends State<Example> {
       body: SafeArea(
         child: ReorderableListView.builder(
           itemBuilder: (context, index) {
-            //! 1
-            // return GreenBox(
-            //   key: UniqueKey(),
-            // );
-            //! 2
-            // return GreenBox(
-            //   key: ValueKey(index),
-            // );
-            //! 3
-            return GreenBox(
-              key: ValueKey(ints[index]),
-            );
+            return GreenBox(key: GlobalKey());
           },
           itemCount: ints.length,
           onReorder: _onReorder,
@@ -57,28 +46,28 @@ class GreenBox extends StatefulWidget {
 
 class _GreenBoxState extends State<GreenBox> {
   var _text = 'start';
-  var isDeactivated = false;
-  var isDisposed = false;
+  // var isDeactivated = false;
+  // var isDisposed = false;
 
   void _changeText(String text) {
     _text = text;
     setState(() {});
   }
 
-  _GreenBoxState() {
-    print('GreenBox state init ----------');
-  }
+  // _GreenBoxState() {
+  //   print('GreenBox state init ----------');
+  // }
 
-  @override
-  void initState() {
-    super.initState();
-    print('GreenBox initState');
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   print('GreenBox initState');
+  // }
 
   @override
   Widget build(BuildContext context) {
-    print(
-        'GreenBox build isDeactivated: $isDeactivated, isDisposed: $isDisposed');
+    // print(
+    //     'GreenBox build isDeactivated: $isDeactivated, isDisposed: $isDisposed');
 
     return Container(
       margin: const EdgeInsets.all(10),
@@ -111,9 +100,9 @@ class _GreenBoxState extends State<GreenBox> {
     );
   }
 
-  @override
-  void deactivate() {
-    print('GreenBox deactivate');
-    super.deactivate();
-  }
+  // @override
+  // void deactivate() {
+  //   print('GreenBox deactivate');
+  //   super.deactivate();
+  // }
 }

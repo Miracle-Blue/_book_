@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 
 final key = GlobalKey<_AwesomeTextState>();
 
-class Example extends StatefulWidget {
+class Example extends StatelessWidget {
   const Example({Key? key}) : super(key: key);
 
-  @override
-  State<Example> createState() => _ExampleState();
-}
-
-class _ExampleState extends State<Example> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
